@@ -14,7 +14,9 @@ Learning demos and practice projects following iOS development roadmap.
 
 **🔹 1. Core OS Layer**
 
-Foundation of iOS – **low-level system services & security.** 
+Foundation of iOS 
+**– low-level system services & 
+– security**
 
 * Kernel & Drivers
     * Darwin OS (Mach + BSD + I/O Kit)
@@ -37,7 +39,11 @@ Foundation of iOS – **low-level system services & security.** 
 
 **🔹 2. Core Services Layer**
 
-Provides essential services like **data storage, networking, location, and motion.**
+Provides essential services like 
+**– data storage, 
+– networking, 
+– location, and 
+– motion.**
 
 🛠 Key Functional Areas:
 
@@ -61,7 +67,11 @@ Provides essential services like **data storage, networking, location, and motio
 
 **🔹 3. Cocoa Touch Layer**
 
-High-level frameworks for **UI, interaction, multimedia, and app experience.** 
+High-level frameworks for 
+**– UI, 
+– interaction, 
+– multimedia, and 
+– app experience.**
 
 🎨 UI & User Interaction:
 * UIKit – Main UI framework: views, buttons, animations, touch handling
