@@ -3,7 +3,6 @@ Learning demos and practice projects following iOS development roadmap.
 
 # Core Concepts
 
-**
 1. Core OS
 2. Core Services
 3. Cocoa Touch **
