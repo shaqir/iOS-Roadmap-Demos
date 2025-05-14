@@ -84,3 +84,6 @@ High-level frameworks for
 * MessageUI – In-app email and messaging
 * EventKit – Calendar events and reminders
 
+
+## Resources
+- [Apple Developer Documentation](https://developer.apple.com/documentation/)
