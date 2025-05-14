@@ -1,22 +1,20 @@
 # iOS-Roadmap-Demos
 Learning demos and practice projects following iOS development roadmap.
 
-Day 1
- Core OS
+# Core Concepts
+
+Core OS
 Core Services
 Cocoa Touch 
 
 Layers in iOS:  
+
 ✅ Gist Summary
-Layer    Focus    Key Features
-Core OS    System foundation, security, concurrency    Kernel, Secure Enclave, GCD, APFS, XPC
-Core Services    App essentials (data, location, network)    Core Data, Core Location, CFNetwork, WebKit
-Cocoa Touch    UI/UX and user interaction frameworks    UIKit, AVFoundation, GameKit, EventKit
+  
  
 
-📦  iOS Architecture Overview
+**🔹 1. Core OS Layer **
 
-🔹 1. Core OS Layer 
 Foundation of iOS – low-level system services & security. 
 * Kernel & Drivers
     * Darwin OS (Mach + BSD + I/O Kit)
@@ -33,7 +31,8 @@ Foundation of iOS – low-level system services & security. 
     * XPC – Lightweight interprocess communication (IPC)
     * System Configuration – Access and manage network settings
 
-🔹 2. Core Services Layer 
+**🔹 2. Core Services Layer **
+
 Provides essential services like data storage, networking, location, and motion. 
 🛠 Key Functional Areas:
 * Data Management
@@ -50,7 +49,8 @@ Provides essential services like data storage, networking, location, and motion.
 * Core Foundation
     * Low-level C-based utilities: strings, dates, run loops (base for Foundation)
 
-🔹 3. Cocoa Touch Layer 
+**🔹 3. Cocoa Touch Layer **
+
 High-level frameworks for UI, interaction, multimedia, and app experience. 
 🎨 UI & User Interaction:
 * UIKit – Main UI framework: views, buttons, animations, touch handling
