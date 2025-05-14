@@ -65,9 +65,9 @@ High-level frameworks for **UI, interaction, multimedia, and app experience.**�
 
 🎨 UI & User Interaction:
 * UIKit – Main UI framework: views, buttons, animations, touch handling
-* Foundation – Shared layer with Core Services for data, dates, localization
-🎮 Multimedia & Advanced Features:
-* Core Motion – Motion data from sensors
+* Foundation – Shared layer with Core Services for data, dates,localization
+* Multimedia & Advanced Features:
+* Core Motion – Motion data from sensors 
 * AVFoundation – Audio/video recording and playback
 * GameKit – Leaderboards, multiplayer, achievements
 * MapKit – Embed Apple Maps and location data
