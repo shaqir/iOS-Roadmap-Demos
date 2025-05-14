@@ -3,15 +3,12 @@ Learning demos and practice projects following iOS development roadmap.
 
 # Core Concepts
 
-Core OS
-Core Services
-Cocoa Touch 
+**
+1. Core OS
+2. Core Services
+3. Cocoa Touch **
 
-Layers in iOS:  
-
-✅ Gist Summary
-  
- 
+## Topics Covered 
 
 **🔹 1. Core OS Layer **
 
