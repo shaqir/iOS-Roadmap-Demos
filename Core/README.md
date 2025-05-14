@@ -12,7 +12,7 @@ Learning demos and practice projects following iOS development roadmap.
 
 ## Topics Covered 
 
-**🔹 1. Core OS Layer **
+**🔹 1. Core OS Layer**
 
 Foundation of iOS – **low-level system services & security.** 
 
@@ -35,7 +35,7 @@ Foundation of iOS – **low-level system services & security.** 
     * XPC – Lightweight interprocess communication (IPC)
     * System Configuration – Access and manage network settings
 
-**🔹 2. Core Services Layer **
+**🔹 2. Core Services Layer**
 
 Provides essential services like **data storage, networking, location, and motion.**
 
