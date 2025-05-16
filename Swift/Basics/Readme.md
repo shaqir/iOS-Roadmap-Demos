@@ -8,6 +8,7 @@
 - Variables with `var`
 - Characters and Strings
 - Data Types
+- Input and Output
 
 - Type inference and explicit types
 - String interpolation 
