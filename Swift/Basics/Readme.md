@@ -13,27 +13,8 @@ This demo introduces how to declare and use variables and constants in Swift. It
 ## 🧠 Concepts Covered
 - Constants with `let`
 - Variables with `var`
+- Characters and Strings
+- Data Types
+
 - Type inference and explicit types
-- String interpolation
-
-
-## 🔍 Key Code Snippets
-
-```swift
-// Declaring a constant
-let name: String = "Sakir"
-
-// Declaring a variable
-var age = 35
-
-// Updating a variable
-age += 1
-
-// Using string interpolation
-print("Hello, my name is \(name) and I am \(age) years old.")
-
-
-## Swift "Hello, World!" Program
-
-print("Hello, World!") 
-
+- String interpolation 
