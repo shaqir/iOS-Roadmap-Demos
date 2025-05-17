@@ -9,6 +9,7 @@
 - Characters and Strings
 - Data Types
 - Input and Output
+- Operators
 
 - Type inference and explicit types
 - String interpolation 
