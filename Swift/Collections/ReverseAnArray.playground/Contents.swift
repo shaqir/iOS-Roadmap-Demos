@@ -104,9 +104,7 @@ print(reversed7) // [5, 4, 3, 2, 1]
 
 /*
  conclusion
- 
- #imageLiteral(resourceName: "Screenshot 2025-05-28 at 11.39.28 PM.png")
- 
+
  ✅ Recommendation
  For real-world use:
 
