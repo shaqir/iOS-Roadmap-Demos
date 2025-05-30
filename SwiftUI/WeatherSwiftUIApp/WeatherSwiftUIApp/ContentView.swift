@@ -10,11 +10,11 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isNight = false
-
+    
     var body: some View {
         ZStack {
             
-            BackgroundView(isNight: $isNight)
+            BackgroundView(isNight: isNight)
             
             VStack(spacing: 16){
                 
@@ -37,7 +37,7 @@ struct ContentView: View {
                                    temperature: 20)
                     WeatherDayView(dayOfweek: "FRI",
                                    imgName: "sun.rain.fill",
-                                    temperature: 20)
+                                   temperature: 20)
                     WeatherDayView(dayOfweek: "SAT",
                                    imgName: "snowflake",
                                    temperature: 20)
@@ -83,8 +83,8 @@ struct WeatherDayView: View {
 }
 
 struct BackgroundView: View {
-     
-    @Binding var isNight : Bool
+    
+    var isNight : Bool
     
     var body: some View {
         LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .grey : Color("lightBlue")]),
