@@ -64,7 +64,7 @@ struct WeatherDayView: View {
     var dayOfweek: String
     var imgName: String
     var temperature: Int
-    
+
     
     var body: some View {
         VStack{
