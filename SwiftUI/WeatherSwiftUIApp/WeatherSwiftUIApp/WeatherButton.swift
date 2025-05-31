@@ -21,7 +21,7 @@ struct WeatherButton: View {
                 print("Tapped")
             }
             .frame(width: 280, height: 50)
-            .background(backgroundColor)
+            .background(backgroundColor.gradient)
             .font(.system(size: 18, weight: .bold, design: .default))
             .foregroundColor(textColor)
             .cornerRadius(10)
