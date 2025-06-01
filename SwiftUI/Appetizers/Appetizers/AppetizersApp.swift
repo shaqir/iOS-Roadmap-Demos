@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+@main // Entry Point of Program
 struct AppetizersApp: App {
     var body: some Scene {
         WindowGroup {
