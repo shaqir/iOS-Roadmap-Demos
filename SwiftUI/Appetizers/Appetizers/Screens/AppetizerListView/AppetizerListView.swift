@@ -40,7 +40,7 @@ struct AppetizerListView: View {
         }.alert(item: $viewModel.alertItem) { alertData in
             Alert(title: Text(alertData.title),
                   message: Text(alertData.message),
-                  dismissButton: alertData.dismissButtonTitle)
+                  dismissButton: alertData.dismissButton)
         }
     }
 }
