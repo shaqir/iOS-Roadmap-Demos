@@ -21,7 +21,6 @@ struct AccountView: View {
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .disableAutocorrection(.none)
-                    
                     DatePicker("Birthday",
                                selection: $viewModel.user.birthday,
                                displayedComponents: .date)
