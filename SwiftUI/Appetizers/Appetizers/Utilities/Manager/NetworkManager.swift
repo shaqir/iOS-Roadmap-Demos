@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 final class NetworkManager{
     
     static let shared = NetworkManager()
+    private let cache = NSCache<NSString, UIImage>()
     
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
     private let appetizersURL = baseURL + "appetizers"
@@ -27,12 +29,12 @@ final class NetworkManager{
         let task = URLSession.shared.dataTask(with: URLRequest(url: URL)) { data, response, error in
             
             if let _ = error {
-                completed(.failure(.unabletoComplete))
+                completed(.failure(.unableToComplete))
                 return
             }
             
             guard let response = response as? HTTPURLResponse else {
-                completed(.failure(.unabletoComplete))
+                completed(.failure(.unableToComplete))
                 return
             }
             
@@ -61,24 +63,56 @@ final class NetworkManager{
     //Async-Await Version using Swift Concurrency
     func getAppetizers() async throws -> [Appetizer] {
         
-        let url = URL(string: appetizersURL)!
-        
         guard let URL = URL(string: appetizersURL) else {
             throw APError.invalidURL
         }
         
-        let (data, response) = try await URLSession.shared.data(from: url)
-        
-        guard let response = response as? HTTPURLResponse else {
-            throw APError.unabletoComplete
+        do {
+            let (data, response) = try await URLSession.shared.data(from: URL)
+            
+            guard let response = response as? HTTPURLResponse else {
+                throw APError.unableToComplete
+            }
+            
+            guard (200...299).contains(response.statusCode) else {
+                throw APError.invalidResponse
+            }
+            
+            let decodedData = try JSONDecoder().decode(AppetizerResponse.self, from: data)
+            return decodedData.request
         }
-        
-        guard (200...299).contains(response.statusCode) else {
-            throw APError.invalidResponse
+        catch {
+            // Specific handling for no internet connection
+            if let urlError = error as? URLError, urlError.code == .notConnectedToInternet {
+                throw APError.noInternetConnection
+            } else {
+                throw APError.unableToComplete
+            }
         }
-
-        let decodedData = try JSONDecoder().decode(AppetizerResponse.self, from: data)
-        return decodedData.request
     }
     
+    //Download image from URL String
+    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void){
+        
+        let cacheKey = NSString(string: urlString)
+        
+        if let image = cache.object(forKey: cacheKey){
+            completed(image)
+            return
+        }
+        
+        guard let url = URL(string: urlString) else {
+            return completed(nil)
+        }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)){ data, response, error in
+     
+            guard let data = data, let image = UIImage(data: data) else {
+                return completed(nil)
+            }
+            self.cache.setObject(image, forKey: cacheKey)
+            completed(image)
+        }
+        task.resume()
+    }
 }

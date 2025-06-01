@@ -8,31 +8,37 @@ import SwiftUI
 
 @MainActor
 final class AppetizerListViewModel: ObservableObject {
-        
+    
     @Published var appetizers: [Appetizer] = []
     @Published var alertItem: AlertItem?
-
+    @Published var isLoading: Bool = false
+    @Published var isShowingDetail = false
+    @Published var selectedAppetizer: Appetizer?
+    
     /// Preferred: Async-Await version of fetching appetizers
     func getAppetizers() async {
+        isLoading = true
         do {
             appetizers = try await NetworkManager.shared.getAppetizers()
-        } catch {
-            print("Error fetching appetizers: \(error.localizedDescription)")
-            
-            switch error as! APError {
-            
-            case .invalidData: alertItem = AlertContext.invalidData
+        }
+        catch let error as APError{
                 
-            case .invalidResponse: alertItem = AlertContext.invalidResponse
+            switch error{
                 
-            case .invalidURL: alertItem = AlertContext.invalidURL
-                
-            case .unabletoComplete: alertItem = AlertContext.unableToComplete
+            case .invalidData:          alertItem = AlertContext.invalidData
+            case .invalidResponse:      alertItem = AlertContext.invalidResponse
+            case .invalidURL:           alertItem = AlertContext.invalidURL
+            case .unableToComplete:     alertItem = AlertContext.unableToComplete
+            case .noInternetConnection: alertItem = AlertContext.noInterntConnection
                 
             }
         }
+        catch{
+            alertItem = AlertContext.unknownError
+        }
+        isLoading = false
     }
-
+    
     /// Optional: Completion handler version (for compatibility or testing)
     func getAppetizers_() {
         NetworkManager.shared.getAppetizers { result in
@@ -45,3 +51,4 @@ final class AppetizerListViewModel: ObservableObject {
         }
     }
 }
+

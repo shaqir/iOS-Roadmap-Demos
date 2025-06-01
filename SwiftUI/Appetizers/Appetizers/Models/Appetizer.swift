@@ -27,10 +27,10 @@ struct MockData{
     static let sampleAppetizers : [Appetizer] = [
         .init(id: 1,
               name: "Bacon",
-              description: "Crispy bacon",
+              description: "Crispy bacon, its so yummy.",
               price: 2.99, imageURL: "https://via.placeholder.com/150",
-              carbs: 0,
-              protein: 7,
+              carbs: 10,
+              protein: 27,
               calories: 250),
         .init(id: 2,
               name: "Chicken Wings 2",
