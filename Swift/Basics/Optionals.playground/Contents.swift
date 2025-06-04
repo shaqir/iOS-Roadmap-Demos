@@ -9,7 +9,7 @@ print(someValue)
 
 var someValue1:Int?
 var someAnotherValue:Int!
-print(someValue1)
+print(someValue1 ?? 0)
 print(someAnotherValue)
 
 
@@ -103,3 +103,4 @@ var someValue8:Int? = 100
 let defaultValue2 = 5
 let unwrappedValue2:Int = someValue8 ?? defaultValue2
 print(unwrappedValue2)
+
