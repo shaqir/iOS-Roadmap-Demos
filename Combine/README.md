@@ -21,14 +21,6 @@ A SwiftUI demo project showcasing a modern, testable, and flexible API client bu
 
 - No external dependencies; uses only Swift standard libraries
 
-## 🧪 How to Run
-
-1. Open Xcode
-2. Create a new iOS App project using SwiftUI
-3. Replace your default `ContentView.swift` with the provided one
-4. Add `APIService.swift` and `User.swift` into your project
-5. Run on Simulator or real device
-
 ## 🌐 API Used
 
 - `https://jsonplaceholder.typicode.com/users/1`
