@@ -8,75 +8,42 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-    @State private var user: User?
-    @State private var errorMessage: String?
-    @State private var isLoading = false
-
-    @State private var cancellables = Set<AnyCancellable>()
+   
+    @StateObject private var viewModel = UserViewModel()
 
     var body: some View {
         NavigationView {
             VStack(spacing: 16) {
-                if isLoading {
-                    ProgressView("Loading user...")
-                } else if let user = user {
+                if viewModel.isLoading {
+                  LoadingView(text: "Loading...")
+                } else if let user = viewModel.user {
                     VStack(spacing: 8) {
-                        Text("👤 Name: \(user.name)")
-                        Text("📧 Email: \(user.email)")
+                        Text(" Name: \(user.name)")
+                        Text(" Email: \(user.email)")
                     }
-                } else if let errorMessage = errorMessage {
+                } else if let errorMessage = viewModel.errorMessage {
                     Text("❌ Error: \(errorMessage)")
                         .foregroundColor(.red)
                 }
 
                 Button("Fetch User (async/await)") {
-                    Task { await fetchUserAsync() }
+                    Task { await viewModel.fetchUserAsync() }
                 }
                 .buttonStyle(.borderedProminent)
 
                 Button("Fetch User (Combine)") {
-                    fetchUserCombine()
+                    viewModel.fetchUserCombine()
                 }
                 .buttonStyle(.bordered)
+                
             }
             .padding()
             .navigationTitle("APIService Demo")
+
         }
     }
 
-    func fetchUserAsync() async {
-        isLoading = true
-        errorMessage = nil
-        do {
-            user = try await APIService.shared.request(
-                urlString: "https://jsonplaceholder.typicode.com/users/1",
-                responseType: User.self
-            )
-        } catch {
-            errorMessage = error.localizedDescription
-        }
-        isLoading = false
-    }
-
-    func fetchUserCombine() {
-        isLoading = true
-        errorMessage = nil
-
-        APIService.shared.requestPublisher(
-            urlString: "https://jsonplaceholder.typicode.com/users/1",
-            responseType: User.self
-        )
-        .receive(on: RunLoop.main)
-        .sink(receiveCompletion: { completion in
-            self.isLoading = false
-            if case let .failure(error) = completion {
-                self.errorMessage = error.localizedDescription
-            }
-        }, receiveValue: { user in
-            self.user = user
-        })
-        .store(in: &cancellables)
-    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
