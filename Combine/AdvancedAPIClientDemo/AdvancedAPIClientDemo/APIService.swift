@@ -22,7 +22,7 @@ protocol URLSessionProtocol {
 extension URLSession: URLSessionProtocol {}
 
 class APIService {
-    static let shared = APIService()
+    static var shared = APIService()
 
     private let session: URLSessionProtocol
 
@@ -92,8 +92,3 @@ class APIService {
     }
 }
 
-struct User: Codable {
-    let id: Int
-    let name: String
-    let email: String
-}

@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		DF4A651C2DF4F05000F2F879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF4A64F62DF4EB4100F2F879 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF4A64FD2DF4EB4100F2F879;
+			remoteInfo = AdvancedAPIClientDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DF4A64FE2DF4EB4100F2F879 /* AdvancedAPIClientDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedAPIClientDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4A65182DF4F05000F2F879 /* AdvancedAPIClientDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvancedAPIClientDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = AdvancedAPIClientDemo;
 			sourceTree = "<group>";
 		};
+		DF4A65192DF4F05000F2F879 /* AdvancedAPIClientDemoTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AdvancedAPIClientDemoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DF4A64FB2DF4EB4100F2F879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF4A65152DF4F05000F2F879 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				DF4A65002DF4EB4100F2F879 /* AdvancedAPIClientDemo */,
+				DF4A65192DF4F05000F2F879 /* AdvancedAPIClientDemoTests */,
 				DF4A64FF2DF4EB4100F2F879 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				DF4A64FE2DF4EB4100F2F879 /* AdvancedAPIClientDemo.app */,
+				DF4A65182DF4F05000F2F879 /* AdvancedAPIClientDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = DF4A64FE2DF4EB4100F2F879 /* AdvancedAPIClientDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DF4A65172DF4F05000F2F879 /* AdvancedAPIClientDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF4A651E2DF4F05000F2F879 /* Build configuration list for PBXNativeTarget "AdvancedAPIClientDemoTests" */;
+			buildPhases = (
+				DF4A65142DF4F05000F2F879 /* Sources */,
+				DF4A65152DF4F05000F2F879 /* Frameworks */,
+				DF4A65162DF4F05000F2F879 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF4A651D2DF4F05000F2F879 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DF4A65192DF4F05000F2F879 /* AdvancedAPIClientDemoTests */,
+			);
+			name = AdvancedAPIClientDemoTests;
+			packageProductDependencies = (
+			);
+			productName = AdvancedAPIClientDemoTests;
+			productReference = DF4A65182DF4F05000F2F879 /* AdvancedAPIClientDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					DF4A64FD2DF4EB4100F2F879 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					DF4A65172DF4F05000F2F879 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = DF4A64FD2DF4EB4100F2F879;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				DF4A64FD2DF4EB4100F2F879 /* AdvancedAPIClientDemo */,
+				DF4A65172DF4F05000F2F879 /* AdvancedAPIClientDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DF4A64FC2DF4EB4100F2F879 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF4A65162DF4F05000F2F879 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF4A65142DF4F05000F2F879 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF4A651D2DF4F05000F2F879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF4A64FD2DF4EB4100F2F879 /* AdvancedAPIClientDemo */;
+			targetProxy = DF4A651C2DF4F05000F2F879 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DF4A65072DF4EB4300F2F879 /* Debug */ = {
@@ -298,6 +373,40 @@
 			};
 			name = Release;
 		};
+		DF4A651F2DF4F05000F2F879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosRoadMapDemos.AdvancedAPIClientDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdvancedAPIClientDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AdvancedAPIClientDemo";
+			};
+			name = Debug;
+		};
+		DF4A65202DF4F05000F2F879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosRoadMapDemos.AdvancedAPIClientDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdvancedAPIClientDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AdvancedAPIClientDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +424,15 @@
 			buildConfigurations = (
 				DF4A650A2DF4EB4300F2F879 /* Debug */,
 				DF4A650B2DF4EB4300F2F879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF4A651E2DF4F05000F2F879 /* Build configuration list for PBXNativeTarget "AdvancedAPIClientDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF4A651F2DF4F05000F2F879 /* Debug */,
+				DF4A65202DF4F05000F2F879 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

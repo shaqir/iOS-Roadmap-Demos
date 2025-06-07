@@ -21,6 +21,7 @@ A SwiftUI demo project showcasing a modern, testable, and flexible API client bu
 
 - No external dependencies; uses only Swift standard libraries
 
+ 
 ## 🌐 API Used
 
 - `https://jsonplaceholder.typicode.com/users/1`
@@ -34,3 +35,4 @@ Returns:
   "email": "Sincere@april.biz"
 }
 ```
+ 
