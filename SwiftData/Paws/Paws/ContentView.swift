@@ -97,9 +97,7 @@ struct ContentView: View {
             .toolbar{
                 ToolbarItem(placement: .topBarLeading){
                     Button{
-                        WithAnimation{
-                            isEditing.toggle()
-                        }
+                    isEditing.toggle()
                     }label:{
                         Image(systemName: "slider.horizontal.3")
                     }
