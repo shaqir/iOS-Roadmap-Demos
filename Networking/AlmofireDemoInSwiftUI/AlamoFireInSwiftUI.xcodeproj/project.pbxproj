@@ -6,8 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DF82D0262DFA152B00116965 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DF82D0252DFA152B00116965 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		DF82D00A2DFA133200116965 /* AlmofireDemoInSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlmofireDemoInSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF82D00A2DFA133200116965 /* AlamoFireInSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamoFireInSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF82D0262DFA152B00116965 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +45,7 @@
 		DF82D00B2DFA133200116965 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF82D00A2DFA133200116965 /* AlmofireDemoInSwiftUI.app */,
+				DF82D00A2DFA133200116965 /* AlamoFireInSwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +53,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DF82D0092DFA133200116965 /* AlmofireDemoInSwiftUI */ = {
+		DF82D0092DFA133200116965 /* AlamoFireInSwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF82D0152DFA133400116965 /* Build configuration list for PBXNativeTarget "AlmofireDemoInSwiftUI" */;
+			buildConfigurationList = DF82D0152DFA133400116965 /* Build configuration list for PBXNativeTarget "AlamoFireInSwiftUI" */;
 			buildPhases = (
 				DF82D0062DFA133200116965 /* Sources */,
 				DF82D0072DFA133200116965 /* Frameworks */,
@@ -63,11 +68,12 @@
 			fileSystemSynchronizedGroups = (
 				DF82D00C2DFA133200116965 /* AlmofireDemoInSwiftUI */,
 			);
-			name = AlmofireDemoInSwiftUI;
+			name = AlamoFireInSwiftUI;
 			packageProductDependencies = (
+				DF82D0252DFA152B00116965 /* Alamofire */,
 			);
 			productName = AlmofireDemoInSwiftUI;
-			productReference = DF82D00A2DFA133200116965 /* AlmofireDemoInSwiftUI.app */;
+			productReference = DF82D00A2DFA133200116965 /* AlamoFireInSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +91,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DF82D0052DFA133200116965 /* Build configuration list for PBXProject "AlmofireDemoInSwiftUI" */;
+			buildConfigurationList = DF82D0052DFA133200116965 /* Build configuration list for PBXProject "AlamoFireInSwiftUI" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -94,12 +100,15 @@
 			);
 			mainGroup = DF82D0012DFA133200116965;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DF82D0242DFA152B00116965 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DF82D00B2DFA133200116965 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DF82D0092DFA133200116965 /* AlmofireDemoInSwiftUI */,
+				DF82D0092DFA133200116965 /* AlamoFireInSwiftUI */,
 			);
 		};
 /* End PBXProject section */
@@ -301,7 +310,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DF82D0052DFA133200116965 /* Build configuration list for PBXProject "AlmofireDemoInSwiftUI" */ = {
+		DF82D0052DFA133200116965 /* Build configuration list for PBXProject "AlamoFireInSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF82D0132DFA133400116965 /* Debug */,
@@ -310,7 +319,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF82D0152DFA133400116965 /* Build configuration list for PBXNativeTarget "AlmofireDemoInSwiftUI" */ = {
+		DF82D0152DFA133400116965 /* Build configuration list for PBXNativeTarget "AlamoFireInSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DF82D0162DFA133400116965 /* Debug */,
@@ -320,6 +329,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF82D0242DFA152B00116965 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF82D0252DFA152B00116965 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF82D0242DFA152B00116965 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF82D0022DFA133200116965 /* Project object */;
 }
