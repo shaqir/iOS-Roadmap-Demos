@@ -9,18 +9,25 @@ import Combine
 
 @MainActor
 class UserViewModel: ObservableObject {
-    
+
+    // MARK: - Published State
+
     @Published var user: User?
     @Published var errorMessage: String?
     @Published var isLoading = false
-    
+
+    // MARK: - Private State
+
     private var cancellables = Set<AnyCancellable>()
 
+    // MARK: - Async/Await Fetch
+
+    /// Demonstrates structured concurrency with async/await.
     func fetchUserAsync() async {
         isLoading = true
         errorMessage = nil
         do {
-            try await Task.sleep(nanoseconds: 1_000_000_000) // 1 second delay
+            try await Task.sleep(nanoseconds: 1_000_000_000)
             user = try await APIService.shared.request(
                 urlString: "https://jsonplaceholder.typicode.com/users/1",
                 responseType: User.self
@@ -31,7 +38,9 @@ class UserViewModel: ObservableObject {
         isLoading = false
     }
 
+    // MARK: - Combine Fetch
 
+    /// Demonstrates the same fetch using Combine publisher pipeline.
     func fetchUserCombine() {
         isLoading = true
         errorMessage = nil
@@ -40,7 +49,7 @@ class UserViewModel: ObservableObject {
             urlString: "https://jsonplaceholder.typicode.com/users/1",
             responseType: User.self
         )
-        .delay(for: .seconds(1), scheduler: DispatchQueue.global()) // Add delay here
+        .delay(for: .seconds(1), scheduler: DispatchQueue.global())
         .receiveOnMain()
         .sink { [weak self] completion in
             guard let self = self else { return }
@@ -53,5 +62,4 @@ class UserViewModel: ObservableObject {
         }
         .store(in: &cancellables)
     }
-
 }
